@@ -1,5 +1,5 @@
 //
-//  NASAImage.swift
+//  HTTPMethod.swift
 //  NASA Image Search
 //
 //  Created by Tom Brook on 26/11/2018.
@@ -8,10 +8,11 @@
 
 import Foundation
 
-
-public struct NASAImage : Decodable
-{
-    var href : String
-    var data : [NASAImageData]
+public enum HTTPMethod: String {
     
+    case get = "GET"
+    case put = "PUT"
+    case post = "POST"
+    case delete = "DELETE"
 }
+

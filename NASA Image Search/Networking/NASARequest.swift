@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+public struct NASARequest : RequestType {
+    public var requestURL: RequestURL
+    public typealias ResponseType = NASAWrapper
+    
+    public init(_ request : RequestURL) {
+        self.requestURL = request
+    }
+}

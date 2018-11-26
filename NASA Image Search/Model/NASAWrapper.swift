@@ -1,5 +1,5 @@
 //
-//  Router.swift
+//  APIWrapper.swift
 //  NASA Image Search
 //
 //  Created by Tom Brook on 26/11/2018.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+public struct NASAWrapper : Decodable {
+    
+    var collection : NASAImageCollection
+    
+}
