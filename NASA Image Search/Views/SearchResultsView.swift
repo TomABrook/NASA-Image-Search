@@ -11,10 +11,11 @@ import UIKit
 class SearchResultsView: UITableViewController {
     
     var presenter : SearchResultsPresenter!
-    var items : [NASAImage]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.contentInset = UIEdgeInsets(top: 20,left: 0,bottom: 0,right: 0)
         
         presenter = SearchResultsPresenter(view: self)
         presenter.loadResults()
@@ -27,28 +28,19 @@ class SearchResultsView: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let items = items else {
-            print("returning 0 rows")
-            return 0}
-        print("returning non zero item coutn")
-        return items.count
+        return presenter.count()
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultsCell", for: indexPath) as! SearchResultsCell
         
-        guard let items = items else {return cell}
-        
-        cell.titleLabel.text = items[indexPath.row].data[0].title
-        cell.hrefLabel.text = items[indexPath.row].href
-
-        return cell
+        return presenter.configureCell(cell, at: indexPath)
     }
     
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 217
     }
 
 
