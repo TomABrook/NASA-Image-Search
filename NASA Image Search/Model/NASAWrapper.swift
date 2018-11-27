@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Wrapper layer in NASA API JSON repsonse
 public struct NASAWrapper : Decodable {
     
     var collection : NASAImageCollection

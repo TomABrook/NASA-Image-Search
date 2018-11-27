@@ -8,16 +8,9 @@
 
 import Foundation
 
-
+// Array of items in NASA API JSON response
 public struct NASAImageCollection : Decodable {
     
     var items : [NASAImage]
- 
-    mutating func parseJSON(data : Data) {
-        do {
-            self = try JSONDecoder().decode(NASAImageCollection.self, from: data)
-        } catch let parsingError {
-            print("error: ", parsingError)
-        }
-    }
+
 }

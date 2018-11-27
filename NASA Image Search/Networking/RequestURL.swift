@@ -9,7 +9,7 @@
 import Foundation
 
 
-
+// Class to capture a url request
 public struct RequestURL {
     
     public let path: String
@@ -29,10 +29,12 @@ public struct RequestURL {
         self.headers = headers
     }
     
+    // Combine components to return the absolute url
     public func buildURL() -> URL? {
         
         var urlString = path
         
+        // If there are parameters, loop through them and append
         if let params = params, params.count > 0 {
             urlString += "?"
             
@@ -41,6 +43,7 @@ public struct RequestURL {
                 urlString += key + "=" + valueString + "&"
             }
             
+            // Removes "&" from the end of the string
             urlString = String(urlString.dropLast())
         }
         

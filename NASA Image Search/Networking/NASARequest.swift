@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 public struct NASARequest : RequestType {
     public var requestURL: RequestURL
     public typealias ResponseType = NASAWrapper

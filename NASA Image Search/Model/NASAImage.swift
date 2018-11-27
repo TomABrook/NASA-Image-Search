@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+// Indiviual image in NASA API JSON response. Contains image data and metadata
 public struct NASAImage : Decodable
 {
     var href : String

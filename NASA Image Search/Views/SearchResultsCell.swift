@@ -10,6 +10,11 @@ import UIKit
 
 class SearchResultsCell: UITableViewCell {
     
+    // Data which is used in segue to detailView
+    var imageData : NASAImageData?
+    var imageURLString : String?
+    
+    // MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateCenterLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
