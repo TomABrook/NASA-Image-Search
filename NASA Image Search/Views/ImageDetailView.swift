@@ -33,9 +33,18 @@ class ImageDetailView: UIViewController {
         presenter.configure()
         
         // Transparent navigation bar
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = UIColor.white
-        UINavigationBar.appearance().tintColor = UIColor.white
+        self.navigationController?.view.backgroundColor = .clear
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        // Restore nav bar
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = nil
+        self.navigationController?.navigationBar.barTintColor = .black
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
 }

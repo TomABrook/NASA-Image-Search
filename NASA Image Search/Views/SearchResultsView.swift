@@ -34,12 +34,10 @@ class SearchResultsView: UITableViewController {
         
         // Hide retry button by default
         retryButton.isHidden = true
-        
+        print("hello")
         presenter.loadResults()
         
-        // Remove transparency from navigation bar
-        self.navigationController?.navigationBar.isTranslucent = false
-
+        
     }
 
     // MARK: - Table view data source
@@ -96,11 +94,22 @@ class SearchResultsView: UITableViewController {
             destination.imageURLString = cell.imageURLString
             
             // Remove title from back button in presented view
-            let back = UIBarButtonItem()
+            let back = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(makeNavOpaque))
             back.title = ""
             back.tintColor = UIColor.white
             navigationItem.backBarButtonItem = back
         }
+    }
+    
+    @objc func makeNavOpaque() {
+    // Remove transparency from navigation bar
+    self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+    self.navigationController?.navigationBar.shadowImage = nil
+    self.navigationController?.navigationBar.tintColor = .black
+    self.navigationController?.navigationBar.barTintColor = .black
+    self.navigationController?.navigationBar.isTranslucent = false
+    
+    print("hello")
     }
     
 }

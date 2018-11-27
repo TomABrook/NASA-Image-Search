@@ -16,7 +16,7 @@
 		E2EBE43121AB5BA100A62D0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2EBE42F21AB5BA100A62D0C /* Main.storyboard */; };
 		E2EBE43321AB5BA300A62D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2EBE43221AB5BA300A62D0C /* Assets.xcassets */; };
 		E2EBE43621AB5BA300A62D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2EBE43421AB5BA300A62D0C /* LaunchScreen.storyboard */; };
-		E2EBE44121AB5BA300A62D0C /* NASA_Image_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EBE44021AB5BA300A62D0C /* NASA_Image_SearchTests.swift */; };
+		E2EBE44121AB5BA300A62D0C /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EBE44021AB5BA300A62D0C /* NetworkTests.swift */; };
 		E2EBE44C21AB5BA300A62D0C /* NASA_Image_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EBE44B21AB5BA300A62D0C /* NASA_Image_SearchUITests.swift */; };
 		E2EBE45F21AC00C800A62D0C /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EBE45E21AC00C800A62D0C /* SearchResultsView.swift */; };
 		E2EBE46121AC00DF00A62D0C /* SearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EBE46021AC00DF00A62D0C /* SearchResultsCell.swift */; };
@@ -68,7 +68,7 @@
 		E2EBE43521AB5BA300A62D0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2EBE43721AB5BA300A62D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2EBE43C21AB5BA300A62D0C /* NASA Image SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA Image SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2EBE44021AB5BA300A62D0C /* NASA_Image_SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_Image_SearchTests.swift; sourceTree = "<group>"; };
+		E2EBE44021AB5BA300A62D0C /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		E2EBE44221AB5BA300A62D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2EBE44721AB5BA300A62D0C /* NASA Image SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA Image SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2EBE44B21AB5BA300A62D0C /* NASA_Image_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_Image_SearchUITests.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		E2EBE43F21AB5BA300A62D0C /* NASA Image SearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				E2EBE44021AB5BA300A62D0C /* NASA_Image_SearchTests.swift */,
+				E2EBE44021AB5BA300A62D0C /* NetworkTests.swift */,
 				E2EBE44221AB5BA300A62D0C /* Info.plist */,
 			);
 			path = "NASA Image SearchTests";
@@ -514,7 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2EBE44121AB5BA300A62D0C /* NASA_Image_SearchTests.swift in Sources */,
+				E2EBE44121AB5BA300A62D0C /* NetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
